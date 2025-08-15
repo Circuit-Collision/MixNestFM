@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00fff0" />
+  <meta name="description" content="Mixnest FM — 24/7 retro-futuristic radio. The hottest mixes, freshest beats, and underground vibes." />
+  <meta property="og:title" content="Mixnest FM" />
+  <meta property="og:description" content="24/7 retro-futuristic radio." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Using system fonts for offline demo; you can uncomment to load Orbitron/Inter
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <title>Mixnest FM — Home</title>
+</head>
+<body>
+  <header>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a class="brand" href="index.html" aria-label="Mixnest FM Home">
+        <img src="assets/logo.png" alt="Mixnest FM Logo" width="36" height="36">
+        <span>Mixnest FM</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation">☰</button>
+      <div id="primary-menu" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="listen.html">Listen</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="djs.html">DJs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle dark/light">🌓</button>
+    </nav>
+
+    <div class="hero">
+      <div class="scanlines"></div>
+      <h1 class="neon">Mixnest <span>FM</span></h1>
+      <p class="tagline">Retro&nbsp;waves • Neon&nbsp;beats • 24/7</p>
+      <div class="cta-row">
+        <a class="btn primary" href="listen.html">▶ Listen Live</a>
+        <a class="btn" href="schedule.html">📅 Schedule</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel now-playing">
+      <h2>Now Playing</h2>
+      <div class="np-row">
+        <div class="np-art" aria-hidden="true"></div>
+        <div class="np-meta">
+          <div class="np-title" id="np-title">Loading…</div>
+          <div class="np-artist" id="np-artist"></div>
+          <div class="np-bar"><span id="np-progress" style="width:0%"></span></div>
+          <div class="np-time"><span id="np-elapsed">0:00</span> / <span id="np-duration">3:30</span></div>
+        </div>
+      </div>
+      <div class="player-inline">
+        <audio id="mixnest-audio" controls preload="none">
+          <!-- TODO: replace with your real streaming URL -->
+          <source src="https://example.com/stream.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <div class="alt-links">
+          Having trouble? Try <a href="https://example.com/stream.mp3">direct stream</a> or use a player like VLC.
+        </div>
+      </div>
+    </section>
+
+    <section class="panel grid two">
+      <div>
+        <h3>Featured Shows</h3>
+        <ul class="show-list">
+          <li><strong>Lo‑Fi Lounge</strong> — Mondays · 6 PM</li>
+          <li><strong>Retro Rewind</strong> — Tuesdays · 8 PM</li>
+          <li><strong>D&B Sessions</strong> — Wednesdays · 7 PM</li>
+          <li><strong>Chillhop Nights</strong> — Thursdays · 9 PM</li>
+          <li><strong>The Weekend Drop</strong> — Fridays · 10 PM</li>
+        </ul>
+        <a class="btn" href="schedule.html">Full Schedule →</a>
+      </div>
+      <div>
+        <h3>About</h3>
+        <p>Broadcasting from the neon‑soaked edges of the net — Mixnest FM fuses synthwave, chillhop, D&amp;B and underground cuts, 24/7.</p>
+        <p>Lock in, discover new sounds, and vibe with our resident DJs.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Mixnest FM • <a href="contact.html">Contact</a> • <a href="#" id="to-top">Back to top ↑</a></p>
+  </footer>
+</body>
+</html>

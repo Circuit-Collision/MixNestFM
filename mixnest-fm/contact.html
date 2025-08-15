@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00fff0" />
+  <meta name="description" content="Mixnest FM — 24/7 retro-futuristic radio. The hottest mixes, freshest beats, and underground vibes." />
+  <meta property="og:title" content="Mixnest FM" />
+  <meta property="og:description" content="24/7 retro-futuristic radio." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Using system fonts for offline demo; you can uncomment to load Orbitron/Inter
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <title>Contact — Mixnest FM</title>
+</head>
+<body>
+  <header>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a class="brand" href="index.html" aria-label="Mixnest FM Home">
+        <img src="assets/logo.svg" alt="Mixnest FM Logo" width="36" height="36">
+        <span>Mixnest FM</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation">☰</button>
+      <div id="primary-menu" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="listen.html">Listen</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="djs.html">DJs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle dark/light">🌓</button>
+    </nav>
+
+    <div class="sub-hero">
+      <h1>Contact</h1>
+      <p>Bookings, promos, and shout‑outs.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel contact">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label> Name
+          <input name="name" type="text" placeholder="Your Name" required />
+        </label>
+        <label> Email
+          <input name="email" type="email" placeholder="you@example.com" required />
+        </label>
+        <label> Message
+          <textarea name="message" rows="6" placeholder="Tell us what's up"></textarea>
+        </label>
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+      <div class="contact-side">
+        <h3>Other Ways</h3>
+        <ul>
+          <li>Email: <a href="mailto:hello@mixnest.fm">hello@mixnest.fm</a></li>
+          <li>Discord: <a href="#">mixnestfm</a></li>
+          <li>DMs open on social</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Mixnest FM</p>
+  </footer>
+</body>
+</html>
